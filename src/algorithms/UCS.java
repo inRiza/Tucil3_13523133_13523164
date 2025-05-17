@@ -30,24 +30,39 @@ public class UCS {
         initialPath.add(new Step(null, null, 0, initialBoard));
         queue.add(new Node(initialBoard, initialPath, 0));
 
+        int nodesExplored = 0;
+        int maxQueueSize = 0;
+
         while (!queue.isEmpty()) {
             Node current = queue.poll();
             String state = current.board.getState();
+            nodesExplored++;
+            maxQueueSize = Math.max(maxQueueSize, queue.size());
 
             if (visited.contains(state)) {
                 continue;
             }
             visited.add(state);
 
+            // Print current state
+            System.out.println("\nExploring state " + nodesExplored + ":");
+            System.out.println("Current cost: " + current.cost);
+            Step.printBoard(current.board);
+
             if (current.board.isGoalState()) {
+                System.out.println("\nSolution found!");
+                System.out.println("Total nodes explored: " + nodesExplored);
+                System.out.println("Maximum queue size: " + maxQueueSize);
                 return current.path;
             }
 
             List<Object[]> possibleMoves = current.board.getPossibleMoves();
+            System.out.println("Possible moves: " + possibleMoves.size());
             for (Object[] move : possibleMoves) {
                 Piece piece = (Piece) move[0];
                 String direction = (String) move[1];
                 int steps = (int) move[2];
+                System.out.println("  " + piece.getId() + " " + direction + " " + steps);
 
                 Board newBoard = current.board.movePiece(piece, direction, steps);
                 if (!visited.contains(newBoard.getState())) {
@@ -58,6 +73,9 @@ public class UCS {
             }
         }
 
-        return null; // No solution found
+        System.out.println("\nNo solution found!");
+        System.out.println("Total nodes explored: " + nodesExplored);
+        System.out.println("Maximum queue size: " + maxQueueSize);
+        return null;
     }
 }
