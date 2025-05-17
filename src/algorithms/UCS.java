@@ -14,6 +14,10 @@ import io.Step;
  * mencapai state tersebut.
  */
 public class UCS {
+    private static int nodesExplored = 0;
+    private static int maxQueueSize = 0;
+    private static long startTime;
+
     /**
      * Kelas Node untuk merepresentasikan state dalam pencarian.
      * Setiap node menyimpan:
@@ -42,12 +46,17 @@ public class UCS {
         }
     }
 
-
-     /** 
+    /**
      * param initialBoard Konfigurasi awal papan
-     * return List of Step yang merepresentasikan solusi (ini biar loop stepnya bisa dijalankan), atau null jika tidak ada
-     */  
+     * return List of Step yang merepresentasikan solusi (ini biar loop stepnya bisa
+     * dijalankan), atau null jika tidak ada
+     */
     public static List<Step> solve(Board initialBoard) {
+        // Reset statistics
+        nodesExplored = 0;
+        maxQueueSize = 0;
+        startTime = System.currentTimeMillis();
+
         // PriorityQueue untuk menyimpan node yang akan dieksplorasi
         // Node dengan cost terendah akan dieksplorasi terlebih dahulu
         PriorityQueue<Node> queue = new PriorityQueue<>();
@@ -60,10 +69,6 @@ public class UCS {
         List<Step> initialPath = new ArrayList<>();
         initialPath.add(new Step(null, null, 0, initialBoard));
         queue.add(new Node(initialBoard, initialPath, 0));
-
-        // Variabel untuk statistik pencarian
-        int nodesExplored = 0;
-        int maxQueueSize = 0;
 
         // Loop utama algoritma UCS
         while (!queue.isEmpty()) {
@@ -86,7 +91,10 @@ public class UCS {
 
             // Cek apakah state saat ini adalah goal state
             if (current.board.isGoalState()) {
+                long endTime = System.currentTimeMillis();
+                double timeInSeconds = (endTime - startTime) / 1000.0;
                 System.out.println("\nSolution found!");
+                System.out.printf("Exploration time: %.3f seconds%n", timeInSeconds);
                 System.out.println("Total nodes explored: " + nodesExplored);
                 System.out.println("Maximum queue size: " + maxQueueSize);
                 return current.path;
@@ -116,9 +124,30 @@ public class UCS {
         }
 
         // Jika queue kosong dan tidak ada solusi yang ditemukan
+        long endTime = System.currentTimeMillis();
+        double timeInSeconds = (endTime - startTime) / 1000.0;
         System.out.println("\nNo solution found!");
+        System.out.printf("Exploration time: %.3f seconds%n", timeInSeconds);
         System.out.println("Total nodes explored: " + nodesExplored);
         System.out.println("Maximum queue size: " + maxQueueSize);
         return null;
+    }
+
+    /**
+     * Get the number of nodes explored during the last search
+     * 
+     * @return number of nodes explored
+     */
+    public static int getNodesExplored() {
+        return nodesExplored;
+    }
+
+    /**
+     * Get the maximum queue size during the last search
+     * 
+     * @return maximum queue size
+     */
+    public static int getMaxQueueSize() {
+        return maxQueueSize;
     }
 }
