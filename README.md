@@ -45,7 +45,7 @@ If you prefer to compile and run manually:
 
 3. Run the program:
    ```
-   java -cp bin gui.MainWindow
+   java -cp bin Main
    ```
 
 ## Program Structure
