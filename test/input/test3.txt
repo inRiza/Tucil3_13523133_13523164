@@ -2,7 +2,7 @@
 8
 AA..BB
 PP....K
-CD.EF.
+CD.E..
 CD.EGG
 CD....
 ......

@@ -45,6 +45,13 @@ public class InputHandler {
         }
         reader.close();
 
+        // Validate the puzzle configuration
+        try {
+            ErrorHandler.validatePuzzle(grid, numPieces);
+        } catch (ErrorHandler.PuzzleValidationException e) {
+            throw new Exception("Invalid puzzle configuration: " + e.getMessage());
+        }
+
         // Identify pieces
         boolean[][] visited = new boolean[rows][cols];
         for (int i = 0; i < rows; i++) {
