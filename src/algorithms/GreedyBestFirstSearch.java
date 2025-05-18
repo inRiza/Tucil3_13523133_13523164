@@ -110,11 +110,21 @@ public class GreedyBestFirstSearch {
         System.out.println("Maximum queue size: " + maxQueueSize);
         return null;
     }
-
+    
+    /**
+     * Mengembalikan jumlah node yang dieksplorasi
+     * 
+     * @return banyak node yang dieksplorasi
+     */
     public static int getNodesExplored() {
         return nodesExplored;
     }
 
+    /**
+     * Mengembalikan ukuran maksimum queue
+     * 
+     * @return ukuran maksimum queue
+     */
     public static int getMaxQueueSize() {
         return maxQueueSize;
     }

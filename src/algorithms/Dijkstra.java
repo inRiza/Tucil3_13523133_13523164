@@ -123,18 +123,18 @@ public class Dijkstra {
     }
 
     /**
-     * Get the number of nodes explored during the last search
+     * Mengembalikan jumlah node yang dieksplorasi
      * 
-     * @return number of nodes explored
+     * @return banyak node yang dieksplorasi
      */
     public static int getNodesExplored() {
         return nodesExplored;
     }
 
     /**
-     * Get the maximum queue size during the last search
+     * Mengembalikan ukuran maksimum queue
      * 
-     * @return maximum queue size
+     * @return ukuran maksimum queue
      */
     public static int getMaxQueueSize() {
         return maxQueueSize;
