@@ -1,6 +1,6 @@
 # Rush Hour Puzzle Solver
 
-A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm.
+A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm, Greedy Best First Search (GBFS), and A*.
 
 ## Prerequisites
 
