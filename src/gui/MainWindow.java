@@ -437,11 +437,4 @@ public class MainWindow extends JFrame {
             index += colors.length; // Handle non-letter pieces
         return colors[index];
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            MainWindow window = new MainWindow();
-            window.setVisible(true);
-        });
-    }
 }

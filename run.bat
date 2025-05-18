@@ -14,6 +14,6 @@ echo Compilation successful!
 echo.
 echo Running Rush Hour Puzzle Solver...
 echo.
-java -cp bin gui.MainWindow
+java -cp bin Main
 
 pause 
