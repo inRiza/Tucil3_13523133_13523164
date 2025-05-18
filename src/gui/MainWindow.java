@@ -401,12 +401,34 @@ public class MainWindow extends JFrame {
     }
 
     private Color getPieceColor(char pieceId) {
-        // Generate different colors for different pieces
-        int hash = pieceId * 31;
-        return new Color(
-                (hash & 0xFF0000) >> 16,
-                (hash & 0x00FF00) >> 8,
-                hash & 0x0000FF);
+        // Diff primary piece color
+        if (pieceId == 'P') {
+            return new Color(0, 255, 107);
+        }
+
+        // I'm tired of finding colors so i just used random colors
+        Color[] colors = {
+                new Color(255, 0, 0),
+                new Color(0, 255, 0),
+                new Color(0, 0, 255),
+                new Color(255, 0, 255),
+                new Color(0, 255, 255),
+                new Color(255, 128, 0),
+                new Color(128, 0, 255),
+                new Color(0, 128, 0),
+                new Color(128, 128, 0),
+                new Color(128, 0, 128),
+                new Color(0, 128, 128),
+                new Color(255, 165, 0),
+                new Color(75, 0, 130),
+                new Color(139, 69, 19)
+        };
+
+        // Use piece ID to select a color, cycling through the array
+        int index = (pieceId - 'A') % colors.length;
+        if (index < 0)
+            index += colors.length; // Handle non-letter pieces
+        return colors[index];
     }
 
     public static void main(String[] args) {
