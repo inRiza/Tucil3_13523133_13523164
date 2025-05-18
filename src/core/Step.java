@@ -1,7 +1,4 @@
-package io;
-
-import core.Board;
-import core.Piece;
+package core;
 
 public class Step {
     private Piece piece;

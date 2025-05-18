@@ -2,8 +2,9 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
-import io.Step;
+
 import core.Piece;
+import core.Step;
 
 public class StepPanel extends JPanel {
     private Step currentStep;

@@ -3,7 +3,7 @@ package algorithms;
 import java.util.*;
 import core.Board;
 import core.Piece;
-import io.Step;
+import core.Step;
 import heuristics.Heuristic;
 
 public class GreedyBestFirstSearch {

@@ -3,7 +3,7 @@ package algorithms;
 import java.util.*;
 import core.Board;
 import core.Piece;
-import io.Step;
+import core.Step;
 
 /**
  * Implementasi algoritma Uniform Cost Search (UCS) untuk menyelesaikan Rush

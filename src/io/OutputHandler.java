@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.List;
 import core.Board;
 import core.Piece;
+import core.Step;
 
 public class OutputHandler {
     private static final String OUTPUT_DIR = "test/output";

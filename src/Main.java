@@ -1,7 +1,7 @@
 import io.InputHandler;
-import io.Step;
 import core.Board;
 import core.Piece;
+import core.Step;
 import algorithms.UCS;
 import algorithms.GreedyBestFirstSearch;
 import java.util.List;
