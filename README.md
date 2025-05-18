@@ -2,6 +2,9 @@
 
 A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm, Greedy Best First Search (GBFS), and A*.
 
+![image](https://github.com/user-attachments/assets/c090097b-dded-4eb5-98e9-ffa213b38e67)
+
+
 ## Prerequisites
 
 - Java Development Kit (JDK) 8 or higher
