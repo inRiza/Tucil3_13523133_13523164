@@ -7,6 +7,7 @@ public class Piece {
     private int size;
     private String orientation;
     private boolean isPrimary;
+    private int length;
 
     public Piece(char id, int row, int col, int size, String orientation, boolean isPrimary) {
         this.id = id;
@@ -15,6 +16,7 @@ public class Piece {
         this.size = size;
         this.orientation = orientation;
         this.isPrimary = isPrimary;
+        this.length = size;
     }
 
     public char getId() {
@@ -39,6 +41,14 @@ public class Piece {
 
     public boolean isPrimary() {
         return isPrimary;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public boolean isHorizontal() {
+        return orientation.equals("H");
     }
 
     // Get occupied cells

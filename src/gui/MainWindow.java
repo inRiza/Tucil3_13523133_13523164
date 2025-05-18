@@ -13,6 +13,8 @@ import algorithms.GreedyBestFirstSearch;
 import algorithms.AStar;
 import heuristics.Heuristic;
 import heuristics.DistanceToExitHeuristic;
+import heuristics.BlockingPiecesHeuristic;
+import heuristics.DistanceWithOrientationHeuristic;
 import java.util.List;
 
 public class MainWindow extends JFrame {
@@ -77,7 +79,7 @@ public class MainWindow extends JFrame {
         algorithmComboBox.addActionListener(e -> updateHeuristicComboBox());
 
         // Heuristic selection
-        String[] heuristics = { "Distance to Exit" };
+        String[] heuristics = { "Distance to Exit", "Blocking Pieces", "Distance with Orientation" };
         heuristicComboBox = new JComboBox<>(heuristics);
         heuristicComboBox.setBackground(buttonColor);
         heuristicComboBox.setForeground(buttonTextColor);
@@ -191,6 +193,10 @@ public class MainWindow extends JFrame {
         String selectedHeuristic = (String) heuristicComboBox.getSelectedItem();
         if ("Distance to Exit".equals(selectedHeuristic)) {
             return new DistanceToExitHeuristic();
+        } else if ("Blocking Pieces".equals(selectedHeuristic)) {
+            return new BlockingPiecesHeuristic();
+        } else if ("Distance with Orientation".equals(selectedHeuristic)) {
+            return new DistanceWithOrientationHeuristic();
         }
         return null;
     }
