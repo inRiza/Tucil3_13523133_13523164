@@ -6,33 +6,33 @@ import core.Piece;
 import core.Step;
 import heuristics.Heuristic;
 
-public class A {
+public class AStar {
     private static int nodesExplored = 0;
     private static int maxQueueSize = 0;
     private static long startTime;
     private static Heuristic heuristic;
-    
-    private static class Node implements Comparable<Node>{
+
+    private static class Node implements Comparable<Node> {
         Board board;
         List<Step> path;
         int cost;
         int heuristicValue;
-        int total;
+        int fValue;
 
-        Node(Board board, List<Step> path, int heuristicValue, int cost) {
+        Node(Board board, List<Step> path, int cost, int heuristicValue) {
             this.board = board;
             this.path = path;
-            this.heuristicValue = heuristicValue;
             this.cost = cost;
-            this.total = heuristicValue + cost;
+            this.heuristicValue = heuristicValue;
+            this.fValue = cost + heuristicValue;
         }
 
         public int compareTo(Node other) {
-            return Integer.compare(this.total, other.total);
-        }   
+            return Integer.compare(this.fValue, other.fValue);
+        }
     }
 
-    public static List<Step> solve(Board initialBoard,  Heuristic heuristicFunc){
+    public static List<Step> solve(Board initialBoard, Heuristic heuristicFunc) {
         nodesExplored = 0;
         maxQueueSize = 0;
         startTime = System.currentTimeMillis();
@@ -60,10 +60,10 @@ public class A {
             if (visited.contains(state)) {
                 continue;
             }
-            
+
             // Tampilkan informasi state yang sedang dieksplorasi
             System.out.println("\nExploring state " + nodesExplored + ":");
-            System.out.println("g: " + current.cost + ", h: " + current.heuristicValue + ", f: " + current.total);
+            System.out.println("g: " + current.cost + ", h: " + current.heuristicValue + ", f: " + current.fValue);
             Step.printBoard(current.board);
 
             // Cek apakah state saat ini adalah goal state
@@ -94,27 +94,26 @@ public class A {
                 // Buat state baru dengan melakukan gerakan
                 Board newBoard = current.board.movePiece(piece, direction, steps);
                 String newState = newBoard.getState();
-                
+
                 // Jika state baru sudah diproses sepenuhnya, skip
                 if (visited.contains(newState)) {
                     continue;
                 }
-                
 
                 int newCost = current.cost + steps;
-                
+
                 // Jika state baru belum pernah ditemui atau memiliki g yang lebih baik
                 if (!Score.containsKey(newState) || newCost < Score.get(newState)) {
                     // Update gScore
                     Score.put(newState, newCost);
-                    
+
                     // Buat path baru
                     List<Step> newPath = new ArrayList<>(current.path);
                     newPath.add(new Step(piece, direction, steps, newBoard));
-                    
+
                     // Hitung nilai heuristik
                     int newH = heuristic.calculate(newBoard);
-                    
+
                     queue.add(new Node(newBoard, newPath, newCost, newH));
                 }
             }

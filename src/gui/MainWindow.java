@@ -10,6 +10,7 @@ import io.InputHandler;
 import io.OutputHandler;
 import algorithms.UCS;
 import algorithms.GreedyBestFirstSearch;
+import algorithms.AStar;
 import heuristics.Heuristic;
 import heuristics.DistanceToExitHeuristic;
 import java.util.List;
@@ -69,7 +70,7 @@ public class MainWindow extends JFrame {
         loadFileButton.addActionListener(e -> loadConfigFile());
 
         // Algorithm selection
-        String[] algorithms = { "UCS", "Greedy Best First Search" };
+        String[] algorithms = { "UCS", "Greedy Best First Search", "A*" };
         algorithmComboBox = new JComboBox<>(algorithms);
         algorithmComboBox.setBackground(buttonColor);
         algorithmComboBox.setForeground(buttonTextColor);
@@ -182,7 +183,8 @@ public class MainWindow extends JFrame {
 
     private void updateHeuristicComboBox() {
         String selectedAlgorithm = (String) algorithmComboBox.getSelectedItem();
-        heuristicComboBox.setEnabled("Greedy Best First Search".equals(selectedAlgorithm));
+        heuristicComboBox
+                .setEnabled("Greedy Best First Search".equals(selectedAlgorithm) || "A*".equals(selectedAlgorithm));
     }
 
     private Heuristic getSelectedHeuristic() {
@@ -257,10 +259,12 @@ public class MainWindow extends JFrame {
             animationTimer.stop();
             autoButton.setText("Auto Play");
         } else {
-            int delay = (Integer) delaySpinner.getValue();
-            animationTimer.setDelay(delay);
-            animationTimer.start();
-            autoButton.setText("Stop");
+            if (solution != null && currentStep < solution.size()) {
+                int delay = (Integer) delaySpinner.getValue();
+                animationTimer.setDelay(delay);
+                animationTimer.start();
+                autoButton.setText("Stop");
+            }
         }
     }
 
@@ -292,41 +296,56 @@ public class MainWindow extends JFrame {
     }
 
     private void startSolving() {
-        if (currentBoard == null)
+        if (currentBoard == null) {
+            statusLabel.setText("Please load a configuration file first!");
             return;
-
-        String selectedAlgorithm = (String) algorithmComboBox.getSelectedItem();
-        long startTime = System.currentTimeMillis();
-
-        if ("UCS".equals(selectedAlgorithm)) {
-            solution = UCS.solve(currentBoard);
-            nodesExplored = UCS.getNodesExplored();
-            maxQueueSize = UCS.getMaxQueueSize();
-        } else if ("Greedy Best First Search".equals(selectedAlgorithm)) {
-            Heuristic heuristic = getSelectedHeuristic();
-            if (heuristic != null) {
-                solution = GreedyBestFirstSearch.solve(currentBoard, heuristic);
-                nodesExplored = GreedyBestFirstSearch.getNodesExplored();
-                maxQueueSize = GreedyBestFirstSearch.getMaxQueueSize();
-            }
         }
 
-        explorationTime = System.currentTimeMillis() - startTime;
-        statsPanel.updateStats(explorationTime, nodesExplored, maxQueueSize);
+        String selectedAlgorithm = (String) algorithmComboBox.getSelectedItem();
+        List<Step> newSolution = null;
+        long startTime = System.currentTimeMillis();
 
-        if (solution != null) {
+        if (selectedAlgorithm.equals("UCS")) {
+            newSolution = UCS.solve(currentBoard);
+        } else if (selectedAlgorithm.equals("Greedy Best First Search")) {
+            Heuristic heuristic = getSelectedHeuristic();
+            newSolution = GreedyBestFirstSearch.solve(currentBoard, heuristic);
+        } else if (selectedAlgorithm.equals("A*")) {
+            Heuristic heuristic = getSelectedHeuristic();
+            newSolution = AStar.solve(currentBoard, heuristic);
+        }
+
+        long endTime = System.currentTimeMillis();
+        double timeInSeconds = (endTime - startTime) / 1000.0;
+
+        if (newSolution != null) {
+            solution = newSolution; // Store the solution
             currentStep = 0;
             stepPanel.updateStep(null, 0, solution.size());
             prevButton.setEnabled(false);
             nextButton.setEnabled(true);
             autoButton.setEnabled(true);
             saveButton.setEnabled(true);
+
+            // Update statistics
+            statsPanel.updateStats(
+                    (long) (timeInSeconds * 1000),
+                    selectedAlgorithm.equals("UCS") ? UCS.getNodesExplored()
+                            : selectedAlgorithm.equals("Greedy Best First Search")
+                                    ? GreedyBestFirstSearch.getNodesExplored()
+                                    : AStar.getNodesExplored(),
+                    selectedAlgorithm.equals("UCS") ? UCS.getMaxQueueSize()
+                            : selectedAlgorithm.equals("Greedy Best First Search")
+                                    ? GreedyBestFirstSearch.getMaxQueueSize()
+                                    : AStar.getMaxQueueSize());
         } else {
+            solution = null;
             stepPanel.updateStep(null, 0, 0);
             prevButton.setEnabled(false);
             nextButton.setEnabled(false);
             autoButton.setEnabled(false);
             saveButton.setEnabled(false);
+            statusLabel.setText("No solution found!");
         }
     }
 
