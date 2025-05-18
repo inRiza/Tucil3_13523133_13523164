@@ -8,6 +8,7 @@ import core.Board;
 import io.InputHandler;
 import io.OutputHandler;
 import algorithms.UCS;
+import algorithms.GreedyBestFirstSearch;
 import java.util.List;
 import io.Step;
 
@@ -65,7 +66,7 @@ public class MainWindow extends JFrame {
         loadFileButton.addActionListener(e -> loadConfigFile());
 
         // Algorithm selection
-        String[] algorithms = { "UCS" };
+        String[] algorithms = { "UCS", "GreedyBestFS" };
         algorithmComboBox = new JComboBox<>(algorithms);
         algorithmComboBox.setBackground(buttonColor);
         algorithmComboBox.setForeground(buttonTextColor);
