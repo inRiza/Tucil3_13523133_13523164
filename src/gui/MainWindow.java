@@ -16,6 +16,7 @@ import heuristics.DistanceToExitHeuristic;
 import heuristics.BlockingPiecesHeuristic;
 import heuristics.DistanceWithOrientationHeuristic;
 import java.util.List;
+import algorithms.Dijkstra;
 
 public class MainWindow extends JFrame {
     private JPanel mainPanel;
@@ -72,7 +73,7 @@ public class MainWindow extends JFrame {
         loadFileButton.addActionListener(e -> loadConfigFile());
 
         // Algorithm selection
-        String[] algorithms = { "UCS", "Greedy Best First Search", "A*" };
+        String[] algorithms = { "UCS", "Greedy Best First Search", "A*", "Dijkstra" };
         algorithmComboBox = new JComboBox<>(algorithms);
         algorithmComboBox.setBackground(buttonColor);
         algorithmComboBox.setForeground(buttonTextColor);
@@ -319,6 +320,8 @@ public class MainWindow extends JFrame {
         } else if (selectedAlgorithm.equals("A*")) {
             Heuristic heuristic = getSelectedHeuristic();
             newSolution = AStar.solve(currentBoard, heuristic);
+        } else if (selectedAlgorithm.equals("Dijkstra")) {
+            newSolution = Dijkstra.solve(currentBoard);
         }
 
         long endTime = System.currentTimeMillis();
@@ -339,11 +342,15 @@ public class MainWindow extends JFrame {
                     selectedAlgorithm.equals("UCS") ? UCS.getNodesExplored()
                             : selectedAlgorithm.equals("Greedy Best First Search")
                                     ? GreedyBestFirstSearch.getNodesExplored()
-                                    : AStar.getNodesExplored(),
+                                    : selectedAlgorithm.equals("A*")
+                                            ? AStar.getNodesExplored()
+                                            : Dijkstra.getNodesExplored(),
                     selectedAlgorithm.equals("UCS") ? UCS.getMaxQueueSize()
                             : selectedAlgorithm.equals("Greedy Best First Search")
                                     ? GreedyBestFirstSearch.getMaxQueueSize()
-                                    : AStar.getMaxQueueSize());
+                                    : selectedAlgorithm.equals("A*")
+                                            ? AStar.getMaxQueueSize()
+                                            : Dijkstra.getMaxQueueSize());
         } else {
             solution = null;
             stepPanel.updateStep(null, 0, 0);
