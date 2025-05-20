@@ -1,0 +1,8 @@
+6 6
+8
+..CAA.
+..C.BL
+.YPPBLK
+.YFFG.
+.ZZZG.
+......

@@ -1,0 +1,156 @@
+Initial Board Configuration:
+Board dimensions: 6x6
+Exit position (K): Row 2, Col 6
+
+Pieces found:
+Piece ID: Z, Position: (0,0), Size: 2, Orientation: horizontal, Is Primary: false
+Piece ID: B, Position: (0,2), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: C, Position: (0,3), Size: 3, Orientation: vertical, Is Primary: false
+Piece ID: A, Position: (1,0), Size: 3, Orientation: vertical, Is Primary: false
+Piece ID: P, Position: (2,1), Size: 2, Orientation: horizontal, Is Primary: true
+Piece ID: D, Position: (3,1), Size: 3, Orientation: horizontal, Is Primary: false
+
+Solution Steps:
+Total steps: 12
+
+Step-by-step solution:
+
+Step 1:
+Board state:
+Z Z B C . . 
+A . B C . . 
+A P P C . . 
+A D D D . . 
+. . . . . . 
+. . . . . . 
+
+
+Step 2:
+Move: A down 2 steps
+Board state:
+Z Z B C . . 
+. . B C . . 
+. P P C . . 
+A D D D . . 
+A . . . . . 
+A . . . . . 
+
+
+Step 3:
+Move: D right 2 steps
+Board state:
+Z Z B C . . 
+. . B C . . 
+. P P C . . 
+A . . D D D 
+A . . . . . 
+A . . . . . 
+
+
+Step 4:
+Move: P left 1 steps
+Board state:
+Z Z B C . . 
+. . B C . . 
+P P . C . . 
+A . . D D D 
+A . . . . . 
+A . . . . . 
+
+
+Step 5:
+Move: B down 3 steps
+Board state:
+Z Z . C . . 
+. . . C . . 
+P P . C . . 
+A . B D D D 
+A . B . . . 
+A . . . . . 
+
+
+Step 6:
+Move: P right 1 steps
+Board state:
+Z Z . C . . 
+. . . C . . 
+. P P C . . 
+A . B D D D 
+A . B . . . 
+A . . . . . 
+
+
+Step 7:
+Move: Z right 1 steps
+Board state:
+. Z Z C . . 
+. . . C . . 
+. P P C . . 
+A . B D D D 
+A . B . . . 
+A . . . . . 
+
+
+Step 8:
+Move: B down 1 steps
+Board state:
+. Z Z C . . 
+. . . C . . 
+. P P C . . 
+A . . D D D 
+A . B . . . 
+A . B . . . 
+
+
+Step 9:
+Move: A up 3 steps
+Board state:
+A Z Z C . . 
+A . . C . . 
+A P P C . . 
+. . . D D D 
+. . B . . . 
+. . B . . . 
+
+
+Step 10:
+Move: D left 3 steps
+Board state:
+A Z Z C . . 
+A . . C . . 
+A P P C . . 
+D D D . . . 
+. . B . . . 
+. . B . . . 
+
+
+Step 11:
+Move: C down 3 steps
+Board state:
+A Z Z . . . 
+A . . . . . 
+A P P . . . 
+D D D C . . 
+. . B C . . 
+. . B C . . 
+
+
+Step 12:
+Move: P right 3 steps
+Board state:
+A Z Z . . . 
+A . . . . . 
+A . . . P P 
+D D D C . . 
+. . B C . . 
+. . B C . . 
+
+
+Exploration Statistics:
+Exploration time: 0,000 seconds
+Nodes explored: 0
+Maximum queue size: 0
+
+Solution Summary:
+Total moves: 12
+Total steps taken: 23

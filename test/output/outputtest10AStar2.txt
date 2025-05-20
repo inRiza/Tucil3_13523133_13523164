@@ -1,0 +1,313 @@
+Initial Board Configuration:
+Board dimensions: 6x6
+Exit position (K): Row 2, Col 6
+
+Pieces found:
+Piece ID: C, Position: (0,2), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: A, Position: (0,3), Size: 2, Orientation: horizontal, Is Primary: false
+Piece ID: B, Position: (1,4), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: L, Position: (1,5), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: Y, Position: (2,1), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: P, Position: (2,2), Size: 2, Orientation: horizontal, Is Primary: true
+Piece ID: F, Position: (3,2), Size: 2, Orientation: horizontal, Is Primary: false
+Piece ID: G, Position: (3,4), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: Z, Position: (4,1), Size: 3, Orientation: horizontal, Is Primary: false
+
+Solution Steps:
+Total steps: 26
+
+Step-by-step solution:
+
+Step 1:
+Board state:
+. . C A A . 
+. . C . B L 
+. Y P P B L 
+. Y F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 2:
+Move: L up 1 steps
+Board state:
+. . C A A L 
+. . C . B L 
+. Y P P B . 
+. Y F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 3:
+Move: Y up 2 steps
+Board state:
+. Y C A A L 
+. Y C . B L 
+. . P P B . 
+. . F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 4:
+Move: P left 2 steps
+Board state:
+. Y C A A L 
+. Y C . B L 
+P P . . B . 
+. . F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 5:
+Move: C down 1 steps
+Board state:
+. Y . A A L 
+. Y C . B L 
+P P C . B . 
+. . F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 6:
+Move: A left 1 steps
+Board state:
+. Y A A . L 
+. Y C . B L 
+P P C . B . 
+. . F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 7:
+Move: B up 1 steps
+Board state:
+. Y A A B L 
+. Y C . B L 
+P P C . . . 
+. . F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 8:
+Move: G up 1 steps
+Board state:
+. Y A A B L 
+. Y C . B L 
+P P C . G . 
+. . F F G . 
+. Z Z Z . . 
+. . . . . . 
+
+
+Step 9:
+Move: Z right 2 steps
+Board state:
+. Y A A B L 
+. Y C . B L 
+P P C . G . 
+. . F F G . 
+. . . Z Z Z 
+. . . . . . 
+
+
+Step 10:
+Move: F left 2 steps
+Board state:
+. Y A A B L 
+. Y C . B L 
+P P C . G . 
+F F . . G . 
+. . . Z Z Z 
+. . . . . . 
+
+
+Step 11:
+Move: C down 2 steps
+Board state:
+. Y A A B L 
+. Y . . B L 
+P P . . G . 
+F F C . G . 
+. . C Z Z Z 
+. . . . . . 
+
+
+Step 12:
+Move: P right 2 steps
+Board state:
+. Y A A B L 
+. Y . . B L 
+. . P P G . 
+F F C . G . 
+. . C Z Z Z 
+. . . . . . 
+
+
+Step 13:
+Move: Y down 1 steps
+Board state:
+. . A A B L 
+. Y . . B L 
+. Y P P G . 
+F F C . G . 
+. . C Z Z Z 
+. . . . . . 
+
+
+Step 14:
+Move: A left 2 steps
+Board state:
+A A . . B L 
+. Y . . B L 
+. Y P P G . 
+F F C . G . 
+. . C Z Z Z 
+. . . . . . 
+
+
+Step 15:
+Move: C down 1 steps
+Board state:
+A A . . B L 
+. Y . . B L 
+. Y P P G . 
+F F . . G . 
+. . C Z Z Z 
+. . C . . . 
+
+
+Step 16:
+Move: F right 2 steps
+Board state:
+A A . . B L 
+. Y . . B L 
+. Y P P G . 
+. . F F G . 
+. . C Z Z Z 
+. . C . . . 
+
+
+Step 17:
+Move: Y down 3 steps
+Board state:
+A A . . B L 
+. . . . B L 
+. . P P G . 
+. . F F G . 
+. Y C Z Z Z 
+. Y C . . . 
+
+
+Step 18:
+Move: F left 2 steps
+Board state:
+A A . . B L 
+. . . . B L 
+. . P P G . 
+F F . . G . 
+. Y C Z Z Z 
+. Y C . . . 
+
+
+Step 19:
+Move: P left 2 steps
+Board state:
+A A . . B L 
+. . . . B L 
+P P . . G . 
+F F . . G . 
+. Y C Z Z Z 
+. Y C . . . 
+
+
+Step 20:
+Move: C up 4 steps
+Board state:
+A A C . B L 
+. . C . B L 
+P P . . G . 
+F F . . G . 
+. Y . Z Z Z 
+. Y . . . . 
+
+
+Step 21:
+Move: P right 2 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. . P P G . 
+F F . . G . 
+. Y . Z Z Z 
+. Y . . . . 
+
+
+Step 22:
+Move: F right 2 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. . P P G . 
+. . F F G . 
+. Y . Z Z Z 
+. Y . . . . 
+
+
+Step 23:
+Move: Y up 2 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. Y P P G . 
+. Y F F G . 
+. . . Z Z Z 
+. . . . . . 
+
+
+Step 24:
+Move: Z left 2 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. Y P P G . 
+. Y F F G . 
+. Z Z Z . . 
+. . . . . . 
+
+
+Step 25:
+Move: G down 1 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. Y P P . . 
+. Y F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Step 26:
+Move: P right 2 steps
+Board state:
+A A C . B L 
+. . C . B L 
+. Y . . P P 
+. Y F F G . 
+. Z Z Z G . 
+. . . . . . 
+
+
+Exploration Statistics:
+Exploration time: 0,000 seconds
+Nodes explored: 0
+Maximum queue size: 0
+
+Solution Summary:
+Total moves: 26
+Total steps taken: 45

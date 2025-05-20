@@ -1,0 +1,1214 @@
+Initial Board Configuration:
+Board dimensions: 6x6
+Exit position (K): Row 2, Col 6
+
+Pieces found:
+Piece ID: A, Position: (0,0), Size: 3, Orientation: vertical, Is Primary: false
+Piece ID: B, Position: (0,1), Size: 2, Orientation: horizontal, Is Primary: false
+Piece ID: C, Position: (0,3), Size: 3, Orientation: vertical, Is Primary: false
+Piece ID: P, Position: (2,1), Size: 2, Orientation: horizontal, Is Primary: true
+Piece ID: D, Position: (3,2), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: E, Position: (3,3), Size: 3, Orientation: horizontal, Is Primary: false
+Piece ID: L, Position: (4,5), Size: 2, Orientation: vertical, Is Primary: false
+Piece ID: Z, Position: (5,2), Size: 3, Orientation: horizontal, Is Primary: false
+
+Solution Steps:
+Total steps: 108
+
+Step-by-step solution:
+
+Step 1:
+Board state:
+A B B C . . 
+A . . C . . 
+A P P C . . 
+. . D E E E 
+. . D . . L 
+. . Z Z Z L 
+
+
+Step 2:
+Move: A down 1 steps
+Board state:
+. B B C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+. . Z Z Z L 
+
+
+Step 3:
+Move: Z left 2 steps
+Board state:
+. B B C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+Z Z Z . . L 
+
+
+Step 4:
+Move: Z right 1 steps
+Board state:
+. B B C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+. Z Z Z . L 
+
+
+Step 5:
+Move: B left 1 steps
+Board state:
+B B . C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+. Z Z Z . L 
+
+
+Step 6:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+. . Z Z Z L 
+
+
+Step 7:
+Move: Z left 2 steps
+Board state:
+B B . C . . 
+A . . C . . 
+A P P C . . 
+A . D E E E 
+. . D . . L 
+Z Z Z . . L 
+
+
+Step 8:
+Move: A down 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+A P P C . . 
+A . D E E E 
+A . D . . L 
+Z Z Z . . L 
+
+
+Step 9:
+Move: Z right 2 steps
+Board state:
+B B . C . . 
+. . . C . . 
+A P P C . . 
+A . D E E E 
+A . D . . L 
+. . Z Z Z L 
+
+
+Step 10:
+Move: A down 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+. P P C . . 
+A . D E E E 
+A . D . . L 
+A . Z Z Z L 
+
+
+Step 11:
+Move: P left 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+P P . C . . 
+A . D E E E 
+A . D . . L 
+A . Z Z Z L 
+
+
+Step 12:
+Move: Z left 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+P P . C . . 
+A . D E E E 
+A . D . . L 
+A Z Z Z . L 
+
+
+Step 13:
+Move: D up 3 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A . . E E E 
+A . . . . L 
+A Z Z Z . L 
+
+
+Step 14:
+Move: P right 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+. P P C . . 
+A . . E E E 
+A . . . . L 
+A Z Z Z . L 
+
+
+Step 15:
+Move: Z right 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+. P P C . . 
+A . . E E E 
+A . . . . L 
+A . Z Z Z L 
+
+
+Step 16:
+Move: E left 2 steps
+Board state:
+B B D C . . 
+. . D C . . 
+. P P C . . 
+A E E E . . 
+A . . . . L 
+A . Z Z Z L 
+
+
+Step 17:
+Move: L up 4 steps
+Board state:
+B B D C . L 
+. . D C . L 
+. P P C . . 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 18:
+Move: L down 1 steps
+Board state:
+B B D C . . 
+. . D C . L 
+. P P C . L 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 19:
+Move: Z right 1 steps
+Board state:
+B B D C . . 
+. . D C . L 
+. P P C . L 
+A E E E . . 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 20:
+Move: Z left 2 steps
+Board state:
+B B D C . . 
+. . D C . L 
+. P P C . L 
+A E E E . . 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 21:
+Move: L down 3 steps
+Board state:
+B B D C . . 
+. . D C . . 
+. P P C . . 
+A E E E . . 
+A . . . . L 
+A Z Z Z . L 
+
+
+Step 22:
+Move: P left 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A E E E . . 
+A . . . . L 
+A Z Z Z . L 
+
+
+Step 23:
+Move: Z right 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A E E E . . 
+A . . . . L 
+A . Z Z Z L 
+
+
+Step 24:
+Move: L up 4 steps
+Board state:
+B B D C . L 
+. . D C . L 
+P P . C . . 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 25:
+Move: Z right 1 steps
+Board state:
+B B D C . L 
+. . D C . L 
+P P . C . . 
+A E E E . . 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 26:
+Move: Z left 2 steps
+Board state:
+B B D C . L 
+. . D C . L 
+P P . C . . 
+A E E E . . 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 27:
+Move: L down 3 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A E E E . L 
+A . . . . L 
+A Z Z Z . . 
+
+
+Step 28:
+Move: Z right 2 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A E E E . L 
+A . . . . L 
+A . . Z Z Z 
+
+
+Step 29:
+Move: Z left 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . . 
+A E E E . L 
+A . . . . L 
+A . Z Z Z . 
+
+
+Step 30:
+Move: L up 2 steps
+Board state:
+B B D C . . 
+. . D C . L 
+P P . C . L 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 31:
+Move: Z right 1 steps
+Board state:
+B B D C . . 
+. . D C . L 
+P P . C . L 
+A E E E . . 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 32:
+Move: Z left 2 steps
+Board state:
+B B D C . . 
+. . D C . L 
+P P . C . L 
+A E E E . . 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 33:
+Move: L down 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . L 
+A E E E . L 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 34:
+Move: Z right 2 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . L 
+A E E E . L 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 35:
+Move: Z left 1 steps
+Board state:
+B B D C . . 
+. . D C . . 
+P P . C . L 
+A E E E . L 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 36:
+Move: D down 1 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . L 
+A E E E . L 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 37:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . L 
+A E E E . L 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 38:
+Move: Z left 2 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . L 
+A E E E . L 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 39:
+Move: L down 2 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . . 
+A E E E . . 
+A . . . . L 
+A Z Z Z . L 
+
+
+Step 40:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . . 
+A E E E . . 
+A . . . . L 
+A . Z Z Z L 
+
+
+Step 41:
+Move: L up 4 steps
+Board state:
+B B . C . L 
+. . D C . L 
+P P D C . . 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 42:
+Move: Z right 1 steps
+Board state:
+B B . C . L 
+. . D C . L 
+P P D C . . 
+A E E E . . 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 43:
+Move: Z left 2 steps
+Board state:
+B B . C . L 
+. . D C . L 
+P P D C . . 
+A E E E . . 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 44:
+Move: L down 3 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . . 
+A E E E . L 
+A . . . . L 
+A Z Z Z . . 
+
+
+Step 45:
+Move: Z right 2 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . . 
+A E E E . L 
+A . . . . L 
+A . . Z Z Z 
+
+
+Step 46:
+Move: Z left 1 steps
+Board state:
+B B . C . . 
+. . D C . . 
+P P D C . . 
+A E E E . L 
+A . . . . L 
+A . Z Z Z . 
+
+
+Step 47:
+Move: L up 2 steps
+Board state:
+B B . C . . 
+. . D C . L 
+P P D C . L 
+A E E E . . 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 48:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+. . D C . L 
+P P D C . L 
+A E E E . . 
+A . . . . . 
+A . . Z Z Z 
+
+
+Step 49:
+Move: Z left 2 steps
+Board state:
+B B . C . . 
+. . D C . L 
+P P D C . L 
+A E E E . . 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 50:
+Move: E right 2 steps
+Board state:
+B B . C . . 
+. . D C . L 
+P P D C . L 
+A . . E E E 
+A . . . . . 
+A Z Z Z . . 
+
+
+Step 51:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+. . D C . L 
+P P D C . L 
+A . . E E E 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 52:
+Move: D down 2 steps
+Board state:
+B B . C . . 
+. . . C . L 
+P P . C . L 
+A . D E E E 
+A . D . . . 
+A . Z Z Z . 
+
+
+Step 53:
+Move: P right 1 steps
+Board state:
+B B . C . . 
+. . . C . L 
+. P P C . L 
+A . D E E E 
+A . D . . . 
+A . Z Z Z . 
+
+
+Step 54:
+Move: A up 1 steps
+Board state:
+B B . C . . 
+. . . C . L 
+A P P C . L 
+A . D E E E 
+A . D . . . 
+. . Z Z Z . 
+
+
+Step 55:
+Move: Z right 1 steps
+Board state:
+B B . C . . 
+. . . C . L 
+A P P C . L 
+A . D E E E 
+A . D . . . 
+. . . Z Z Z 
+
+
+Step 56:
+Move: D down 1 steps
+Board state:
+B B . C . . 
+. . . C . L 
+A P P C . L 
+A . . E E E 
+A . D . . . 
+. . D Z Z Z 
+
+
+Step 57:
+Move: E left 2 steps
+Board state:
+B B . C . . 
+. . . C . L 
+A P P C . L 
+A E E E . . 
+A . D . . . 
+. . D Z Z Z 
+
+
+Step 58:
+Move: L down 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+A P P C . L 
+A E E E . L 
+A . D . . . 
+. . D Z Z Z 
+
+
+Step 59:
+Move: L down 1 steps
+Board state:
+B B . C . . 
+. . . C . . 
+A P P C . . 
+A E E E . L 
+A . D . . L 
+. . D Z Z Z 
+
+
+Step 60:
+Move: A up 1 steps
+Board state:
+B B . C . . 
+A . . C . . 
+A P P C . . 
+A E E E . L 
+. . D . . L 
+. . D Z Z Z 
+
+
+Step 61:
+Move: L up 2 steps
+Board state:
+B B . C . . 
+A . . C . L 
+A P P C . L 
+A E E E . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 62:
+Move: L down 1 steps
+Board state:
+B B . C . . 
+A . . C . . 
+A P P C . L 
+A E E E . L 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 63:
+Move: B right 1 steps
+Board state:
+. B B C . . 
+A . . C . . 
+A P P C . L 
+A E E E . L 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 64:
+Move: L up 2 steps
+Board state:
+. B B C . L 
+A . . C . L 
+A P P C . . 
+A E E E . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 65:
+Move: L down 1 steps
+Board state:
+. B B C . . 
+A . . C . L 
+A P P C . L 
+A E E E . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 66:
+Move: L down 2 steps
+Board state:
+. B B C . . 
+A . . C . . 
+A P P C . . 
+A E E E . L 
+. . D . . L 
+. . D Z Z Z 
+
+
+Step 67:
+Move: A up 1 steps
+Board state:
+A B B C . . 
+A . . C . . 
+A P P C . . 
+. E E E . L 
+. . D . . L 
+. . D Z Z Z 
+
+
+Step 68:
+Move: L up 3 steps
+Board state:
+A B B C . L 
+A . . C . L 
+A P P C . . 
+. E E E . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 69:
+Move: E right 1 steps
+Board state:
+A B B C . L 
+A . . C . L 
+A P P C . . 
+. . E E E . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 70:
+Move: E right 1 steps
+Board state:
+A B B C . L 
+A . . C . L 
+A P P C . . 
+. . . E E E 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 71:
+Move: E left 3 steps
+Board state:
+A B B C . L 
+A . . C . L 
+A P P C . . 
+E E E . . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 72:
+Move: C down 2 steps
+Board state:
+A B B . . L 
+A . . . . L 
+A P P C . . 
+E E E C . . 
+. . D C . . 
+. . D Z Z Z 
+
+
+Step 73:
+Move: L down 2 steps
+Board state:
+A B B . . . 
+A . . . . . 
+A P P C . L 
+E E E C . L 
+. . D C . . 
+. . D Z Z Z 
+
+
+Step 74:
+Move: B right 3 steps
+Board state:
+A . . . B B 
+A . . . . . 
+A P P C . L 
+E E E C . L 
+. . D C . . 
+. . D Z Z Z 
+
+
+Step 75:
+Move: L down 1 steps
+Board state:
+A . . . B B 
+A . . . . . 
+A P P C . . 
+E E E C . L 
+. . D C . L 
+. . D Z Z Z 
+
+
+Step 76:
+Move: B left 1 steps
+Board state:
+A . . B B . 
+A . . . . . 
+A P P C . . 
+E E E C . L 
+. . D C . L 
+. . D Z Z Z 
+
+
+Step 77:
+Move: L up 2 steps
+Board state:
+A . . B B . 
+A . . . . L 
+A P P C . L 
+E E E C . . 
+. . D C . . 
+. . D Z Z Z 
+
+
+Step 78:
+Move: B right 1 steps
+Board state:
+A . . . B B 
+A . . . . L 
+A P P C . L 
+E E E C . . 
+. . D C . . 
+. . D Z Z Z 
+
+
+Step 79:
+Move: C up 2 steps
+Board state:
+A . . C B B 
+A . . C . L 
+A P P C . L 
+E E E . . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 80:
+Move: E right 3 steps
+Board state:
+A . . C B B 
+A . . C . L 
+A P P C . L 
+. . . E E E 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 81:
+Move: E left 2 steps
+Board state:
+A . . C B B 
+A . . C . L 
+A P P C . L 
+. E E E . . 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 82:
+Move: L down 1 steps
+Board state:
+A . . C B B 
+A . . C . . 
+A P P C . L 
+. E E E . L 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 83:
+Move: L down 1 steps
+Board state:
+A . . C B B 
+A . . C . . 
+A P P C . . 
+. E E E . L 
+. . D . . L 
+. . D Z Z Z 
+
+
+Step 84:
+Move: A down 1 steps
+Board state:
+. . . C B B 
+A . . C . . 
+A P P C . . 
+A E E E . L 
+. . D . . L 
+. . D Z Z Z 
+
+
+Step 85:
+Move: A down 2 steps
+Board state:
+. . . C B B 
+. . . C . . 
+. P P C . . 
+A E E E . L 
+A . D . . L 
+A . D Z Z Z 
+
+
+Step 86:
+Move: E right 1 steps
+Board state:
+. . . C B B 
+. . . C . . 
+. P P C . . 
+A . E E E L 
+A . D . . L 
+A . D Z Z Z 
+
+
+Step 87:
+Move: A up 1 steps
+Board state:
+. . . C B B 
+. . . C . . 
+A P P C . . 
+A . E E E L 
+A . D . . L 
+. . D Z Z Z 
+
+
+Step 88:
+Move: L up 2 steps
+Board state:
+. . . C B B 
+. . . C . L 
+A P P C . L 
+A . E E E . 
+A . D . . . 
+. . D Z Z Z 
+
+
+Step 89:
+Move: E right 1 steps
+Board state:
+. . . C B B 
+. . . C . L 
+A P P C . L 
+A . . E E E 
+A . D . . . 
+. . D Z Z Z 
+
+
+Step 90:
+Move: A up 1 steps
+Board state:
+. . . C B B 
+A . . C . L 
+A P P C . L 
+A . . E E E 
+. . D . . . 
+. . D Z Z Z 
+
+
+Step 91:
+Move: D up 1 steps
+Board state:
+. . . C B B 
+A . . C . L 
+A P P C . L 
+A . D E E E 
+. . D . . . 
+. . . Z Z Z 
+
+
+Step 92:
+Move: Z left 1 steps
+Board state:
+. . . C B B 
+A . . C . L 
+A P P C . L 
+A . D E E E 
+. . D . . . 
+. . Z Z Z . 
+
+
+Step 93:
+Move: Z left 1 steps
+Board state:
+. . . C B B 
+A . . C . L 
+A P P C . L 
+A . D E E E 
+. . D . . . 
+. Z Z Z . . 
+
+
+Step 94:
+Move: A down 1 steps
+Board state:
+. . . C B B 
+. . . C . L 
+A P P C . L 
+A . D E E E 
+A . D . . . 
+. Z Z Z . . 
+
+
+Step 95:
+Move: A up 2 steps
+Board state:
+A . . C B B 
+A . . C . L 
+A P P C . L 
+. . D E E E 
+. . D . . . 
+. Z Z Z . . 
+
+
+Step 96:
+Move: Z right 2 steps
+Board state:
+A . . C B B 
+A . . C . L 
+A P P C . L 
+. . D E E E 
+. . D . . . 
+. . . Z Z Z 
+
+
+Step 97:
+Move: A down 3 steps
+Board state:
+. . . C B B 
+. . . C . L 
+. P P C . L 
+A . D E E E 
+A . D . . . 
+A . . Z Z Z 
+
+
+Step 98:
+Move: P left 1 steps
+Board state:
+. . . C B B 
+. . . C . L 
+P P . C . L 
+A . D E E E 
+A . D . . . 
+A . . Z Z Z 
+
+
+Step 99:
+Move: Z left 1 steps
+Board state:
+. . . C B B 
+. . . C . L 
+P P . C . L 
+A . D E E E 
+A . D . . . 
+A . Z Z Z . 
+
+
+Step 100:
+Move: D up 3 steps
+Board state:
+. . D C B B 
+. . D C . L 
+P P . C . L 
+A . . E E E 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 101:
+Move: P right 1 steps
+Board state:
+. . D C B B 
+. . D C . L 
+. P P C . L 
+A . . E E E 
+A . . . . . 
+A . Z Z Z . 
+
+
+Step 102:
+Move: A up 3 steps
+Board state:
+A . D C B B 
+A . D C . L 
+A P P C . L 
+. . . E E E 
+. . . . . . 
+. . Z Z Z . 
+
+
+Step 103:
+Move: Z left 2 steps
+Board state:
+A . D C B B 
+A . D C . L 
+A P P C . L 
+. . . E E E 
+. . . . . . 
+Z Z Z . . . 
+
+
+Step 104:
+Move: E left 3 steps
+Board state:
+A . D C B B 
+A . D C . L 
+A P P C . L 
+E E E . . . 
+. . . . . . 
+Z Z Z . . . 
+
+
+Step 105:
+Move: C down 3 steps
+Board state:
+A . D . B B 
+A . D . . L 
+A P P . . L 
+E E E C . . 
+. . . C . . 
+Z Z Z C . . 
+
+
+Step 106:
+Move: P right 2 steps
+Board state:
+A . D . B B 
+A . D . . L 
+A . . P P L 
+E E E C . . 
+. . . C . . 
+Z Z Z C . . 
+
+
+Step 107:
+Move: L down 2 steps
+Board state:
+A . D . B B 
+A . D . . . 
+A . . P P . 
+E E E C . L 
+. . . C . L 
+Z Z Z C . . 
+
+
+Step 108:
+Move: P right 1 steps
+Board state:
+A . D . B B 
+A . D . . . 
+A . . . P P 
+E E E C . L 
+. . . C . L 
+Z Z Z C . . 
+
+
+Exploration Statistics:
+Exploration time: 0,000 seconds
+Nodes explored: 0
+Maximum queue size: 0
+
+Solution Summary:
+Total moves: 108
+Total steps taken: 176
