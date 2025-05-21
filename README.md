@@ -76,13 +76,22 @@ If you prefer to compile and run manually:
 - Exploration statistics display 
 
 ## 👥 Contributors
-
-| Name | GitHub |
-|------|--------|
-| Rafa Abdussalam Danaydaksa | [@RafaAbdussalam](https://github.com/RafaAbdussalam) |
-| Muhammad Rizain Firdaus | [@inRiza](https://github.com/inRiza) |
-
----
+<p align="center">
+  <table>
+    <tr align="center">
+      <td>
+        <img src="https://github.com/RafaAbdussalam.png" width="100" height="100"><br>
+        <b>Rafa Abdussalam Danadyaksa</b><br>
+        13523133
+      </td>
+      <td>
+        <img src="https://github.com/inRiza.png" width="100" height="100"><br>
+        <b>Muhammad Rizain Firdaus</b><br>
+        13523164
+      </td>
+    </tr>
+  </table>
+</p>
 
 <p align="center">
 Made with ❤️ by Rafa Abdussalam Danaydaksa and Muhammad Rizain Firdaus
