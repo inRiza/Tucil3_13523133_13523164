@@ -325,7 +325,7 @@ public class MainWindow extends JFrame {
         }
 
         long endTime = System.currentTimeMillis();
-        double timeInSeconds = (endTime - startTime) / 1000.0;
+        explorationTime = endTime - startTime;
 
         if (newSolution != null) {
             solution = newSolution; // Store the solution
@@ -336,21 +336,23 @@ public class MainWindow extends JFrame {
             autoButton.setEnabled(true);
             saveButton.setEnabled(true);
 
-            // Update statistics
-            statsPanel.updateStats(
-                    (long) (timeInSeconds * 1000),
-                    selectedAlgorithm.equals("UCS") ? UCS.getNodesExplored()
-                            : selectedAlgorithm.equals("Greedy Best First Search")
-                                    ? GreedyBestFirstSearch.getNodesExplored()
-                                    : selectedAlgorithm.equals("A*")
-                                            ? AStar.getNodesExplored()
-                                            : Dijkstra.getNodesExplored(),
-                    selectedAlgorithm.equals("UCS") ? UCS.getMaxQueueSize()
-                            : selectedAlgorithm.equals("Greedy Best First Search")
-                                    ? GreedyBestFirstSearch.getMaxQueueSize()
-                                    : selectedAlgorithm.equals("A*")
-                                            ? AStar.getMaxQueueSize()
-                                            : Dijkstra.getMaxQueueSize());
+            // Store statistics in class variables
+            nodesExplored = selectedAlgorithm.equals("UCS") ? UCS.getNodesExplored()
+                    : selectedAlgorithm.equals("Greedy Best First Search")
+                            ? GreedyBestFirstSearch.getNodesExplored()
+                            : selectedAlgorithm.equals("A*")
+                                    ? AStar.getNodesExplored()
+                                    : Dijkstra.getNodesExplored();
+
+            maxQueueSize = selectedAlgorithm.equals("UCS") ? UCS.getMaxQueueSize()
+                    : selectedAlgorithm.equals("Greedy Best First Search")
+                            ? GreedyBestFirstSearch.getMaxQueueSize()
+                            : selectedAlgorithm.equals("A*")
+                                    ? AStar.getMaxQueueSize()
+                                    : Dijkstra.getMaxQueueSize();
+
+            // Update statistics panel
+            statsPanel.updateStats(explorationTime, nodesExplored, maxQueueSize);
         } else {
             solution = null;
             stepPanel.updateStep(null, 0, 0);
