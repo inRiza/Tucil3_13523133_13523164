@@ -1,9 +1,21 @@
-# 🚗 Rush Hour Puzzle Solver
+<h1 align="center">🚗 Rush Hour Puzzle Solver 🚗</h1>
 
-A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm, Greedy Best First Search (GBFS), A*, and Dijkstra.
+<p align="center">
+<img src="https://img.shields.io/badge/Made%20with-Java-red.svg"/>
+<img src="https://img.shields.io/badge/Made%20with-Swing-orange.svg"/>
+<img src="https://img.shields.io/badge/License-MIT-green.svg"/>
+<img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=this%20Repository&style=style=flat&color=blue" alt="Star Badge"/>
+</p>
 
-![image](https://github.com/user-attachments/assets/c090097b-dded-4eb5-98e9-ffa213b38e67)
+<span align="center">
 
+A Java application that solves Rush Hour puzzles using various search algorithms!<br/>
+Uniform Cost Search (UCS) 🎯<br/>
+Greedy Best First Search (GBFS) 🎯<br/>
+A* Algorithm 🎯<br/>
+Dijkstra's Algorithm 🎯<br/>
+
+</span>
 
 ## 📋 Prerequisites
 
@@ -69,3 +81,9 @@ If you prefer to compile and run manually:
 |------|--------|
 | Rafa Abdussalam Danaydaksa | [@RafaAbdussalam](https://github.com/RafaAbdussalam) |
 | Muhammad Rizain Firdaus | [@inRiza](https://github.com/inRiza) |
+
+---
+
+<p align="center">
+Made with ❤️ by Rafa Abdussalam Danaydaksa and Muhammad Rizain Firdaus
+</p>
