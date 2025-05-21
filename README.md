@@ -1,22 +1,22 @@
-# Rush Hour Puzzle Solver
+# 🚗 Rush Hour Puzzle Solver
 
-A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm, Greedy Best First Search (GBFS), and A*.
+A Java application that solves Rush Hour puzzles using the Uniform Cost Search (UCS) algorithm, Greedy Best First Search (GBFS), A*, and Dijkstra.
 
 ![image](https://github.com/user-attachments/assets/c090097b-dded-4eb5-98e9-ffa213b38e67)
 
 
-## Prerequisites
+## 📋 Prerequisites
 
 - Java Development Kit (JDK) 8 or higher
 - Make sure Java is in your system's PATH
 
-## Running the Program
+## 🚀 Running the Program
 
 ### Windows
 1. Double-click the `run.bat` file, or
 2. Open Command Prompt in the project directory and run:
    ```
-   run.bat
+   ./run.bat
    ```
 
 ### Linux/macOS
@@ -48,7 +48,7 @@ If you prefer to compile and run manually:
    java -cp bin Main
    ```
 
-## Program Structure
+## 📁 Program Structure
 - `src/core/` - Core classes for the puzzle
 - `src/io/` - Input/Output handling
 - `src/algorithms/` - Puzzle solving algorithms
@@ -56,9 +56,16 @@ If you prefer to compile and run manually:
 - `test/input/` - Input configuration files
 - `test/output/` - Output solution files
 
-## Features
+## ✨ Features
 - Load puzzle configurations from files
 - Visualize the solving process
 - Step-by-step solution navigation
 - Save solutions to files
 - Exploration statistics display 
+
+## 👥 Contributors
+
+| Name | GitHub |
+|------|--------|
+| Rafa Abdussalam Danaydaksa | [@RafaAbdussalam](https://github.com/RafaAbdussalam) |
+| Muhammad Rizain Firdaus | [@inRiza](https://github.com/inRiza) |
