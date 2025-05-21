@@ -92,7 +92,3 @@ If you prefer to compile and run manually:
     </tr>
   </table>
 </p>
-
-<p align="center">
-Made with ❤️ by Rafa Abdussalam Danaydaksa and Muhammad Rizain Firdaus
-</p>
